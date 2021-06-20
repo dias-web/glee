@@ -1,0 +1,130 @@
+.products {
+  margin-bottom: 95px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-bottom: 145px
+  }
+
+  &__item {
+    margin: 0 15px 40px;
+    width: 22%;
+    height: 380px
+  }
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &__item:not(:last-child) {
+    margin-right: 30px
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    @extend %dmsans-700;
+    font-weight: 700;
+    color: $grey-500;
+    background-color: transparent
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+  @extend %dmsans-700;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: $black-100;
+
+
+
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 27px 15px 35px;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, .05);
+  text-align: center;
+  background-color: $white;
+
+  &:hover {
+    .product-card__navigation {
+      opacity: 1;
+    }
+  }
+
+  &__img-wrap {
+    margin: auto auto 80px;
+    max-height: 195px;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+    @extend %dmsans-500;
+    font-weight: 500;
+    font-size: 16px;
+    color: $title;
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    font-weight: 700;
+    color: $main;
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+
+    }
+  }
+
+  &__star {
+    display: none;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: $white;
+
+    &:hover {
+      background-color: $main;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $main;
+    }
+
+  }
+
+}
