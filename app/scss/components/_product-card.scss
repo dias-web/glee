@@ -1,0 +1,100 @@
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 27px 15px 35px;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 4px 3px rgba(37, 37, 37, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    box-shadow: 2px 8px 5px 4px rgba(37, 37, 37, 0.1);
+
+    .product-card__navigation {
+      opacity: 1;
+    }
+  }
+
+  &__img-wrap {
+    margin: auto auto 80px;
+    max-height: 195px;
+
+  }
+
+  &__title {
+    @include line-clamp(1);
+
+    margin-bottom: 11px;
+    font-family: $dm-sans;
+    font-weight: 500;
+    font-size: 16px;
+    color: $title;
+  }
+
+  &__price {
+    @include line-clamp(1);
+
+    font-family: $dm-sans;
+    font-weight: 700;
+    color: $main;
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 2px 6px 4px 3px rgba(37, 37, 37, 0.05);
+    background-color: $white;
+
+    &:hover {
+      background-color: $main;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $main;
+    }
+
+    @extend %hover-nav-header;
+  }
+}

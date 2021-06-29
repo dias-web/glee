@@ -1,0 +1,107 @@
+.hero {
+  &__items {
+    background-color: $bg;
+  }
+
+  &__item {
+    padding: 220px 0 280px;
+
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: 50%;
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
+      transform: translateY(-50%);
+
+    }
+
+  }
+
+  &__name {
+    @include line-clamp(2);
+
+    margin-bottom: 24px;
+    max-width: 430px;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $title;
+
+  }
+
+  &__text {
+    @include line-clamp(4);
+
+    margin-bottom: 44px;
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 1.4;
+
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      height: auto;
+      object-fit: cover;
+
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    display: flex;
+    transform: translateX(-50%);
+
+    li {
+      &:not(:last-child) {
+        margin-right: 11px;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        font-weight: 500;
+        font-size: 12px;
+        background-color: rgba($white, 0.3);
+        transition: background-color 0.5s;
+
+        &:focus,
+        &:hover {
+          background-color: rgba($white, 0.6);
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

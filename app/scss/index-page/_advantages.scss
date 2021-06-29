@@ -1,0 +1,58 @@
+.advantages {
+  margin-bottom: 70px;
+
+  &__items {
+    display: flex;
+
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+    width: 100%;
+    font-family: $dm-sans;
+    font-weight: 400;
+    background-color: rgba($bg, 0.2);
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba($title, 0.1);
+
+    }
+  }
+
+  &__info {
+    padding-left: 80px;
+    max-width: 306px;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    &--support {
+      background-image: url("../images/content/support.svg");
+    }
+
+    &--delivery {
+      background-image: url("../images/content/delivery.svg");
+    }
+
+    &--cart {
+      background-image: url("../images/content/credit.svg");
+    }
+  }
+
+  &__title {
+    @include line-clamp(2);
+
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: $grey-400;
+  }
+
+  &__text {
+    @include line-clamp(4);
+
+    line-height: 1.4;
+    color: $grey-300;
+  }
+}

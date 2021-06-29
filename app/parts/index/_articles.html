@@ -1,0 +1,44 @@
+<section class="articles">
+  <h2 class="visually-hidden">Our Insights and Articles</h2>
+  <div class="container">
+    <div class="articles__top">
+      <h2 class="title articles__title">Our Insights & Articles</h2>
+      <a class="articles__next" href="#">
+        View All
+        <svg>
+          <use xlink:href="images/sprite.svg#next"></use>
+        </svg>
+      </a>
+    </div>
+
+    <ul class="articles__items">
+      <li class="articles__item">
+        @@include('../_article-card.html', {
+        "img": "images/articles/1.png",
+        "category": "news",
+        "title": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "date": "28 january, 2020",
+        "author": "by admin",
+        })
+      </li>
+      <li class="articles__item">
+        @@include('../_article-card.html', {
+        "img": "images/articles/2.png",
+        "category": "news",
+        "title": "Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+        "date": "28 january, 2020",
+        "author": "by admin",
+        })
+      </li>
+      <li class="articles__item">
+        @@include('../_article-card.html', {
+        "img": "images/articles/3.png",
+        "category": "news",
+        "title": "Rncididunt ut labore et dolore magna aliqua. Ut enim",
+        "date": "28 january, 2020",
+        "author": "by admin",
+        })
+      </li>
+    </ul>
+  </div>
+</section>

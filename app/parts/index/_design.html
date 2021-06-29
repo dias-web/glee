@@ -1,0 +1,53 @@
+<section class="design">
+  <h2 class="visually-hidden">New design products</h2>
+  <div class="container">
+    <h2 class="title">New Design</h2>
+    @@include('../_products-filter.html')
+    <ul class="design__items">
+      <li class="design__item mix chairs">
+        @@include('../_design-card.html', {
+        "img": "images/design/1.png",
+        "title": "Beat Flat Pendant Black",
+        "category": "Classic"
+        })
+      </li>
+      <li class="design__item mix chairs">
+        @@include('../_design-card.html', {
+        "img": "images/design/2.png",
+        "title": "Lampe Sur Pieds Bamboo",
+        "category": "Classic"
+        })
+      </li>
+      <li class="design__item design__item--sm-img mix lighting">
+        @@include('../_design-card.html', {
+        "img": "images/design/3.png",
+        "title": "Rattan Rocking Chair",
+        "addClass": "design-card__img-wrap--sm",
+        "category": "Classic"
+        })
+      </li>
+      <li class="design__item mix furnitures">
+        @@include('../_design-card.html', {
+        "img": "images/design/4.png",
+        "title": "Rattan Rocking Chair",
+        "category": "Classic"
+        })
+      </li>
+      <li class="design__item design__item--sm-img mix chairs">
+        @@include('../_design-card.html', {
+        "img": "images/design/5.png",
+        "title": "Rattan Rocking Chair",
+        "addClass": "design-card__img-wrap--sm",
+        "category": "Classic"
+        })
+      </li>
+      <li class="design__item mix decor">
+        @@include('../_design-card.html', {
+        "img": "images/design/6.png",
+        "title": "Lampe Sur Pieds Bamboo",
+        "category": "Classic"
+        })
+      </li>
+    </ul>
+  </div>
+</section>

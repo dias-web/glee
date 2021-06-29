@@ -1,0 +1,43 @@
+.video-popup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 112px;
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba($main, 0.4);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+  }
+
+  &:hover {
+    &::before {
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  svg {
+    z-index: 2;
+    width: 98px;
+    height: 98px;
+
+  }
+
+  &:focus {
+    outline: 1px solid transparent;
+  }
+}

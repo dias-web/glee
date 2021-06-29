@@ -1,0 +1,25 @@
+.company {
+  position: relative;
+  z-index: 1;
+  padding: 260px 0 92px;
+  background-color: rgba($bg, 0.2);
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    display: flex !important;
+    flex-direction: column;
+    height: 85px;
+  }
+
+  &__img {
+    margin: auto;
+  }
+
+  &--with-articles {
+    padding: 264px 0 92px;
+
+  }
+}

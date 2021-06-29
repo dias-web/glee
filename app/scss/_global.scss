@@ -1,21 +1,31 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
-  font-family: "Rubik", Tahoma, sans-serif;
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   color: $text;
   background-color: $white;
-  display: flex;
-  flex-direction: column;
 }
 
-.main {
-  flex-grow: 1;
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+
+  &--long {
+    max-width: 1800px;
+  }
+}
+
+button,
+a,
+textarea,
+input,
+iframe {
+  &:focus {
+    outline: 1px solid $title;
+  }
 }
 
 .visually-hidden {
@@ -30,13 +40,70 @@ body {
   clip: rect(0, 0, 0, 0);
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  min-width: 320px;
-  max-width: 1200px;
+.title {
+  @include line-clamp(2);
 
-  &--long {
-    max-width: 1800px;
+  margin-bottom: 25px;
+  font-family: $dm-sans;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: $grey-600;
+
+}
+
+.shop-link {
+  display: inline-block;
+  padding: 21px 20px 21px 27px;
+  color: $white;
+  background-color: $main;
+  transition: background-color 0.5s, color 0.5s;
+
+  &:hover {
+    color: $bg;
+    background-color: $title;
+
+    svg {
+      fill: $bg;
+    }
   }
+
+  svg {
+    width: 22px;
+    height: 9px;
+    fill: $white;
+    transition: fill 0.5s;
+  }
+
+  span {
+    padding-right: 55px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+.form-btn {
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  font-family: $dm-sans;
+  font-weight: 400;
+  color: $white;
+  background-color: $main;
+
+  &--light {
+    border-color: $main;
+    color: $title;
+    background-color: $white;
+
+    &:hover {
+      border-color: transparent;
+      color: $white;
+    }
+  }
+
+  @extend %hover-nav-header;
 }

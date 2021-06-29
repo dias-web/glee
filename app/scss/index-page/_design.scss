@@ -1,0 +1,17 @@
+.design {
+  margin-bottom: 85px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+  }
+
+  &__item {
+    margin: 0 15px 34px;
+    width: calc(100% / 3 - 30px);
+    height: 245px;
+
+  }
+}

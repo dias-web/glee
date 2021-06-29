@@ -1,0 +1,106 @@
+<section class="products-week">
+  <h2 class="visually-hidden">Products of the week</h2>
+  <div class="container">
+    <h2 class="title">Products of the week</h2>
+    @@include('../_products-filter.html')
+    <ul class="products-week__items">
+      <li class="products-week__item mix furnitures">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/222.jpg",
+        "title": "Wooden radio",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix furnitures">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/2.png",
+        "title": "Wooden chair",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix chairs">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/3.png",
+        "title": "White chair",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix chairs">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/4.png",
+        "title": "Retro table",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix lighting">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/5.png",
+        "title": "Wooden radio",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix lighting">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/6.png",
+        "title": "Wooden chair",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix decor">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/7.png",
+        "title": "White chair",
+        "price": "29.00",
+        })
+      </li>
+      <li class="products-week__item mix decor">
+        @@include('../_product-card.html', {
+        "img": "images/product-card/8.png",
+        "title": "Retro table",
+        "price": "29.00",
+        })
+      </li>
+    </ul>
+  </div>
+  <div class="offers">
+    <div class="container container--long">
+      <ul class="offers__items">
+        <li class="offers__item">
+          <article class="offers__content">
+            <img class="offers__img" src="images/offers/1.png" alt="Mirum Notare Tellus">
+            <h3 class="offers__title">Mirum Notare Tellus</h3>
+            <div class="offers__text">
+              <p>
+                LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+              </p>
+            </div>
+            <a class="shop-link offers__link" href="#">
+              <span>View More</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </article>
+        </li>
+        <li class="offers__item">
+          <article class="offers__content">
+            <img class="offers__img" src="images/offers/2.png" alt="Malesuada Tempor Euismod">
+            <h3 class="offers__title">Malesuada Tempor Euismod</h3>
+            <div class="offers__text">
+              <p>
+                50W 8000lm Compact Size for HID
+                StreetLightReplacementLEDCornLight
+              </p>
+            </div>
+            <a class="shop-link offers__link" href="#">
+              <span>View More</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

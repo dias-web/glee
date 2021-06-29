@@ -1,0 +1,55 @@
+.articles {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -170px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    font-family: $dm-sans;
+    font-weight: 700;
+
+  }
+
+  &__title {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  &__next {
+    position: relative;
+    padding-right: 25px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: $grey-500;
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 3px;
+      width: 7px;
+      height: 12px;
+      fill: $grey-500;
+    }
+
+    @extend %hover-link;
+  }
+
+  &__items {
+    display: flex;
+
+  }
+
+  &__item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+    }
+  }
+
+
+}
