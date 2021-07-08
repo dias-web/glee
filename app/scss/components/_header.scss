@@ -4,6 +4,14 @@
     align-items: center;
     padding: 45px 0;
 
+    @include r($xl) {
+      justify-content: space-between;
+    }
+
+    @include r($md) {
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
   }
 
   &__btn {
@@ -14,6 +22,10 @@
     width: 40px;
     border: none;
     background-color: transparent;
+
+    @include r($xl) {
+      display: block;
+    }
 
     span {
       display: block;
@@ -27,6 +39,21 @@
       }
     }
 
+    &.header__btn--active span {
+      background-color: $white;
+
+      &:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+      }
+    }
   }
 }
 
@@ -38,6 +65,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include r($xl) {
+        margin-right: 0;
+      }
 
     }
   }
@@ -53,13 +84,53 @@
     }
   }
 
+  &--mobile {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+
+    .menu__link {
+      display: block;
+      padding: 20px 0;
+      font-size: 22px;
+      color: $white;
+    }
+  }
+
   &--header {
     padding-left: 178px;
+
+    @include r($xxl) {
+      padding-left: 0;
+    }
+
+    @include r($xl) {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba($title, 0.9);
+      transform: translateY(-200%);
+      transition: transform 0.3s;
+
+      &.menu--mobile {
+        transform: translateY(0);
+      }
+    }
 
   }
 
   &--footer {
     margin: 0;
+
+    @include r($sm) {
+      justify-content: center;
+    }
 
     .menu__item {
       align-self: baseline;
@@ -83,9 +154,20 @@
 .user-nav {
   display: flex;
 
+  @include r($md) {
+    justify-content: center;
+    order: 1;
+    margin-top: 15px;
+    width: 100%;
+  }
+
   &__search {
     margin-right: 21px;
     background-color: rgba($main, 0.2);
+
+    @include r($sm) {
+      margin-right: auto;
+    }
 
     svg {
       width: 16px;
@@ -98,6 +180,11 @@
 
   &__menu {
     background-color: $main;
+
+    @include r($sm) {
+      margin-left: auto;
+    }
+
 
     svg {
       width: 20px;
@@ -150,6 +237,9 @@
       padding: 17px 41px 12px 30px;
       border-radius: 0 30px 30px 0;
 
+      @include r($sm) {
+        margin-right: 0;
+      }
     }
 
     @extend %hover-nav-header;

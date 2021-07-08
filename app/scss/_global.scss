@@ -8,6 +8,10 @@ body {
   background-color: $white;
 }
 
+.body--with-menu {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -48,7 +52,7 @@ iframe {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
-  color: $grey-600;
+  color: $grey-700;
 
 }
 
@@ -94,6 +98,10 @@ label {
   color: $white;
   background-color: $main;
 
+  &:active {
+    background-color: $grey-600;
+  }
+
   &--light {
     border-color: $main;
     color: $title;
@@ -103,6 +111,8 @@ label {
       border-color: transparent;
       color: $white;
     }
+
+
   }
 
   @extend %hover-nav-header;

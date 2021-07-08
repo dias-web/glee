@@ -6,6 +6,10 @@
   &__item {
     padding: 220px 0 280px;
 
+    @include r($xl) {
+      padding: 20px 0 90px;
+    }
+
   }
 
   &__wrap {
@@ -28,6 +32,20 @@
       background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
       transform: translateY(-50%);
 
+      @include r($xxl) {
+        right: 0;
+        width: 450px;
+        height: 450px;
+      }
+
+      @include r($xl) {
+        display: none;
+      }
+    }
+
+    @include r($xl) {
+      flex-direction: column;
+      text-align: center;
     }
 
   }
@@ -43,6 +61,16 @@
     text-transform: uppercase;
     color: $title;
 
+    @include r($xl) {
+      margin-bottom: 15px;
+      max-width: none;
+      font-size: 48px;
+    }
+
+    @include r($md) {
+      font-size: 26px;
+    }
+
   }
 
   &__text {
@@ -53,24 +81,39 @@
     font-size: 18px;
     line-height: 1.4;
 
+    @include r($xl) {
+      margin-bottom: 15px;
+      max-width: none;
+    }
+
   }
 
   &__img {
     position: relative;
 
+    @include r($xl) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
     img {
       height: auto;
       object-fit: cover;
+
+      @include r($xl) {
+        margin: auto;
+      }
 
     }
   }
 
   .slick-dots {
     position: absolute;
-    left: 50%;
     bottom: 45px;
     display: flex;
-    transform: translateX(-50%);
+    justify-content: center;
+    width: 100%;
 
     li {
       &:not(:last-child) {
@@ -102,6 +145,12 @@
           background-color: $white;
         }
       }
+    }
+  }
+
+  .shop-link {
+    @include r($xl) {
+      margin-bottom: 30px;
     }
   }
 }

@@ -9,33 +9,17 @@
   box-shadow: 0 6px 4px 3px rgba(37, 37, 37, 0.05);
   transition: box-shadow 0.3s ease;
 
-  &__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-  }
-
-  & img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-
-  &:hover {
-    box-shadow: 2px 8px 5px 4px rgba(37, 37, 37, 0.1);
-
-    .product-card__navigation {
-      opacity: 1;
-    }
+  @include r($sm) {
+    padding: 10px;
   }
 
   &__img-wrap {
     margin: auto auto 80px;
     max-height: 195px;
 
+    @include r($xl) {
+      margin: auto;
+    }
   }
 
   &__title {
@@ -70,6 +54,31 @@
     &:not(:last-child) {
       margin-right: 16px;
 
+      @include r($sm) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    box-shadow: 2px 8px 5px 4px rgba(37, 37, 37, 0.1);
+
+    .product-card__navigation {
+      opacity: 1;
     }
   }
 

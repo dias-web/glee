@@ -3,6 +3,14 @@
   font-size: 14px;
   color: $grey-200;
 
+  @include r($md) {
+    padding: 50px 0 15px;
+  }
+
+  @include r($sm) {
+    text-align: center;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;
@@ -10,11 +18,21 @@
     padding-bottom: 71px;
     border-bottom: 1px solid rgba($main, 0.4);
 
+    @include r($lg) {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+    }
+
   }
 
   &__logo {
     display: block;
     margin-bottom: 30px;
+
+    @include r($sm) {
+      display: inline-block;
+    }
 
   }
 
@@ -22,6 +40,15 @@
     padding-top: 18px;
     width: 100%;
     max-width: 270px;
+
+    @include r($lg) {
+      margin-bottom: 15px;
+      max-width: 50%;
+    }
+
+    @include r($sm) {
+      max-width: 100%;
+    }
 
   }
 
@@ -55,12 +82,31 @@
     display: flex;
     justify-content: space-between;
 
+    @include r($md) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__copyright {
+    @include r($md) {
+      margin-bottom: 15px;
+    }
   }
 }
 
 .address {
   width: 100%;
   max-width: 270px;
+
+  @include r($lg) {
+    margin-bottom: 15px;
+    max-width: 50%;
+  }
+
+  @include r($sm) {
+    max-width: 100%;
+  }
 
   &__item {
     &:not(:last-child) {

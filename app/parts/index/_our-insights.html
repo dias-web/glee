@@ -1,9 +1,8 @@
-<section class="articles">
-  <h2 class="visually-hidden">Our Insights and Articles</h2>
+<section class="our-insights @@if(context.addClass) {@@addClass}">
   <div class="container">
-    <div class="articles__top">
-      <h2 class="title articles__title">Our Insights & Articles</h2>
-      <a class="articles__next" href="#">
+    <div class="our-insights__top">
+      <h2 class="title our-insights__title">Our Insights & Articles</h2>
+      <a class="our-insights__next" href="#">
         View All
         <svg>
           <use xlink:href="images/sprite.svg#next"></use>
@@ -11,8 +10,8 @@
       </a>
     </div>
 
-    <ul class="articles__items">
-      <li class="articles__item">
+    <ul class="our-insights__items">
+      <li class="our-insights__item">
         @@include('../_article-card.html', {
         "img": "images/articles/1.png",
         "category": "news",
@@ -21,7 +20,7 @@
         "author": "by admin",
         })
       </li>
-      <li class="articles__item">
+      <li class="our-insights__item">
         @@include('../_article-card.html', {
         "img": "images/articles/2.png",
         "category": "news",
@@ -30,7 +29,7 @@
         "author": "by admin",
         })
       </li>
-      <li class="articles__item">
+      <li class="our-insights__item">
         @@include('../_article-card.html', {
         "img": "images/articles/3.png",
         "category": "news",

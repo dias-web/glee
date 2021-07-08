@@ -6,11 +6,30 @@
     flex-wrap: wrap;
     margin: 0 -15px;
     margin-bottom: 145px;
+
+    @include r($md) {
+      margin: 0 -10px 30px;
+    }
   }
 
   &__item {
     margin: 0 15px 40px;
     width: calc(100% / 4 - 30px);
     height: 380px;
+
+    @include r($lg) {
+      width: calc(100% / 3 - 30px);
+      height: 330px;
+    }
+
+    @include r($md) {
+      margin: 0 10px 20px;
+      width: calc(100% / 2 - 20px);
+      height: 300px;
+    }
+
+    @include r($sm) {
+      width: calc(100% - 20px);
+    }
   }
 }

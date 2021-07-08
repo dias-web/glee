@@ -7,13 +7,16 @@
   background-color: $grey-50;
   transition: box-shadow 0.3s ease;
 
+  @include r($xl) {
+    padding: 15px 0 0 15px;
+  }
+
   &__link {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    cursor: pointer;
   }
 
   &:hover {
@@ -49,9 +52,22 @@
     bottom: 35px;
     max-width: 270px;
 
+    @include r($xl) {
+      bottom: 15px;
+    }
+
+    @include r($lg) {
+      max-width: 250px;
+    }
+
     &--sm {
       right: 35px;
       max-width: 145px;
+
+      @include r($md) {
+        right: 15px;
+        max-width: 100px !important;
+      }
 
     }
   }

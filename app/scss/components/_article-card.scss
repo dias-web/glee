@@ -13,11 +13,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    cursor: pointer;
   }
 
   &:hover {
-    box-shadow: 2px 8px 5px 4px rgba(37, 37, 37, 0.2);
+    box-shadow: 8px 8px 5px 4px rgba(37, 37, 37, 0.2);
   }
 
   &__img-wrap {

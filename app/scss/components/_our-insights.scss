@@ -1,4 +1,4 @@
-.articles {
+.our-insights {
   position: relative;
   z-index: 2;
   margin-bottom: -170px;
@@ -10,6 +10,14 @@
     margin-bottom: 45px;
     font-family: $dm-sans;
     font-weight: 700;
+
+    @include r($md) {
+      margin-bottom: 15px;
+    }
+
+    @include r($sm) {
+      flex-wrap: wrap;
+    }
 
   }
 
@@ -40,14 +48,40 @@
   &__items {
     display: flex;
 
+    @include r($lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
   }
 
   &__item {
     width: 100%;
 
+    @include r($lg) {
+      width: 100%;
+    }
+
+    @include r($md) {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
 
+      @include r($lg) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+    }
+  }
+
+  &--with-company {
+    margin-bottom: -171px;
+
+    @include r($lg) {
+      margin-bottom: 15px;
     }
   }
 
